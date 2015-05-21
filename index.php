@@ -1,3 +1,6 @@
+<?php 
+	require_once(__DIR__ . "/model/config.php");
+?>
 <!DOCTYPE html>
 <html>
 		<head>
@@ -6,6 +9,17 @@
 			<link rel="stylesheet" type="text/css" href="css/normalize.css">
 			<link rel="stylesheet" type="text/css" href="css/reset.css">
 		</head>
+		<header>
+			<button type="button">
+				<a href="<?php echo $path . "register.php"?>">register</a>
+			</button>
+			<button type="button">
+				<a href="<?php echo $path . "login.php"?>">login</a>
+			</button>
+			<button type="button">
+				<a href="<?php echo $path . "constroller/logout-user.php"?>">logout</a>
+			</button>
+		</header>
 		<body>
 			<div class="wrap">
 				<div class="task-list">
@@ -14,15 +28,15 @@
 						$mysqli = new mysqli('localhost', 'root', 'root', 'tasks');
 						$query = "SELECT = FROM tasks ORDER BY date ASC, time ASC";
 						if ($result = $mysqli->query($query)) {
-							$numrows = $result->num_rows:
+							$numrows = $result->num_rows;
 							if ($numrows>0) {
 								while ($row = $result->fetch_assoc()){
 									$task_id = $row['id'];
 									$task_name = $row['task'];
 
 									echo '<li>
-										<span>'.$task_name'</span>'
-										'<img id = "'.$task_id.'"class = "delete-button" width = "10px" src = "images/close.svg"/>
+										<span>'.$task_name'</span>
+										<img id = "'.$task_id.'"class = "delete-button" width = "10px" src = "images/close.svg"/>
 									</li>';
 								}
 							}
