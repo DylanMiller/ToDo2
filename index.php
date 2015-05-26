@@ -11,13 +11,13 @@
 		</head>
 		<header>
 			<button type="button">
-				<a href="<?php echo $path . "register.php"?>">register</a>
+				<a href="<?php echo $path . "Sublime Text 3/ToDo2/register.php"?>">register</a>
 			</button>
 			<button type="button">
-				<a href="<?php echo $path . "login.php"?>">login</a>
+				<a href="<?php echo $path . "Sublime Text 3/ToDo2/login.php"?>">login</a>
 			</button>
 			<button type="button">
-				<a href="<?php echo $path . "constroller/logout-user.php"?>">logout</a>
+				<a href="<?php echo $path . "Sublime Text 3/ToDo2/controller/logout-user.php"?>">logout</a>
 			</button>
 		</header>
 		<body>
@@ -35,7 +35,7 @@
 									$task_name = $row['task'];
 
 									echo '<li>
-										<span>'.$task_name'</span>
+										<span>'.$task_name.'</span>
 										<img id = "'.$task_id.'"class = "delete-button" width = "10px" src = "images/close.svg"/>
 									</li>';
 								}

@@ -6,8 +6,8 @@
 		 . $mysqli->connect_error	);
 		
 	}
-	else{
-		echo "Connection made";
-	}
-	$mysql->close();
+	//else{
+	//	echo "Connection made";
+	//}
+	//$mysql->close();
 ?>
