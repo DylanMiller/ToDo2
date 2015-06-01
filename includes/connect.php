@@ -9,5 +9,5 @@
 	else{
 		
 	}
-	//$mysql->close();
+	$mysqli->close();
 ?>
