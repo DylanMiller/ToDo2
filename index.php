@@ -1,5 +1,5 @@
-<?php   
-	require_once(__DIR__ . "/model/config.php");
+<?php
+	require_once(__DIR__ . "../model/config.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,6 +8,7 @@
 			<link rel="stylesheet" type="text/css" href="css/main.css">
 			<link rel="stylesheet" type="text/css" href="css/normalize.css">
 			<link rel="stylesheet" type="text/css" href="css/reset.css">
+			<link rel="stylesheet" type="text/css" href="css/bootstrap.zip">
 		</head>
 		<header>
 			<button type="button">
@@ -54,14 +55,14 @@
 
 			function add_task(){
 				$('.add-new-task').submit(function(
-					var new_task = $('.add-new-task input[name=new-task').val();
+					var new_task = $('.add-new-task input[name=new-task]').val();
 
 					if (new_task != '') {
-						$.post('includesl/add-task.php', {task: new_task), function(data) {
+						$.post('includes/add-task.php', {task: new_task}, function(data) {
 							$('add-new-task input[name=new-task]').val();
-							$(data).appendTo('task-list ul').hide().fadeIn();)
+							$(data).appendTo('task-list ul').hide().fadeIn();
 						});
-					};
+					}
 					return false;
 				));
 			}
